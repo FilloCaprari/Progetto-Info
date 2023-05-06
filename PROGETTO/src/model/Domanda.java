@@ -34,6 +34,22 @@ public class Domanda {
     public String getTesto() {
         return testo;
     }
+
+    public Opzione getA() {
+        return a;
+    }
+
+    public Opzione getB() {
+        return b;
+    }
+
+    public Opzione getC() {
+        return c;
+    }
+
+    public Opzione getD() {
+        return d;
+    }
     
     public void Giusta()
     {

@@ -12,7 +12,7 @@ package model;
 public class Opzione{
     
     private String opzione1;
-    private boolean giusta=false;
+    private boolean giusta;
 
     public Opzione(String opz1, boolean g) {
         this.opzione1 = opz1;
