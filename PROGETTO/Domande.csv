@@ -21,7 +21,7 @@ ID,Domanda,Opzione 1,Opzione 2,Opzione 3,Opzione 4,Risposta
 20,Qual è la più grande cascata d'Europa?,Cascata del Toce,Cascata delle Marmore,Cascate del Reno,Cascata del Dettifoss,2
 21,In che anno è stata fondata Facebook?,2001,2004,2007,2010,2
 22,Qual è il più grande deserto del mondo?,Deserto del Gobi,Deserto del Kalahari,Deserto del Sahara,Deserto dell'Arabia,3
-23,Qual è il significato di "ad hoc"?,per questo, per quel motivo, per l'occasione, per l'età,3
+23,Qual è il significato di "ad hoc"?,per questo,per quel motivo,per l'occasione,per l'età,3
 24,Qual è la valuta ufficiale del Giappone?,yen,dollaro,euro,peso,1
 25,Quale è la moneta ufficiale della Svizzera?,franco svizzero,corona svedese,baht thailandese,lira turca,1
 26,In quale paese si trova l'isola di Santorini?,Grecia,Turchia,Egitto,Italia,1
@@ -41,46 +41,46 @@ ID,Domanda,Opzione 1,Opzione 2,Opzione 3,Opzione 4,Risposta
 40,Qual è la durata media di una partita di calcio?,90 minuti,60 minuti,120 minuti,45 minuti,1
 41,Come si chiama il libro sacro dell'islam?,Corano,Bibbia,Talmud,Tripitaka,1
 42,Qual è il secondo pianeta del sistema solare?,Venere,Marte,Mercurio,Giove,1
-43, Qual è il fiume più lungo del mondo?, Rio delle Amazzoni, Nilo, Mississippi, Yangtze, 1
-44, Chi ha scritto il famoso romanzo "Il signore degli anelli"?, J.R.R. Tolkien, George R.R. Martin, J.K. Rowling, Stephen King, 1
-45, Quale pianeta del sistema solare è noto come il "pianeta rosso"?, Marte, Venere, Giove, Mercurio, 1
-46, Qual è il deserto più grande del mondo?, Sahara, Gobi, Antartide, Kalahari, 1
-47, Quale città italiana è conosciuta come la "Città Eterna"?, Roma, Firenze, Venezia, Napoli, 1
-48, In che anno è stata fondata l'azienda informatica Apple?, 1976, 1984, 1990, 2001, 1
-49, Quale è l'organo più grande del corpo umano?, La pelle, Il fegato, Il cuore, Il cervello, 1
-50, Quale è il più grande stato degli Stati Uniti d'America?, Alaska, Texas, California, Montana, 1
-51, Quale città italiana è famosa per i canali che la attraversano?, Venezia, Milano, Roma, Firenze, 1
-52, In che anno è stata fondata la città di New York?, 1624, 1776, 1865, 1901, 1
-53, Qual è la lingua più parlata al mondo?, Cinese mandarino, Inglese, Spagnolo, Arabo, 1
-54, Quale è l'unico continente a non avere una popolazione autoctona?, Antartide, Europa, Asia, Africa, 1
-55, In quale paese si trova la città di Machu Picchu?, Perù, Messico, Brasile, Colombia, 1
-56, Qual è il nome della più grande cascata del mondo?, Cascate del Niagara, Cascate del Iguazú, Cascate Vitória, Cascate del Salto Ángel, 4
-57, Quale era il soprannome di Gaius Julius Caesar?, Giulio Cesare, Il dittatore, Il tiranno, Il conquistatore, 2
-58, In quale città si trova il celebre museo dell'Ermitage?, San Pietroburgo, Mosca, Kiev, Varsavia, 1
-59, Quale è la forma geometrica della Torre di Pisa?, Cilindro, Cubo, Cono, Sfera, 3
-60, Quale dei seguenti animali è il più veloce al mondo?, Ghepardo, Leopardo, Pantera, Tigre, 1
-61, Quale è il paese più piccolo del mondo in termini di area territoriale?, Città del Vaticano, Monaco, San Marino, Liechtenstein, 1
-62, In quale paese si trova la famosa città di Petra?, Giordania, Egitto, Arabia Saudita, Israele, 1
-63, Qual è la capitale dell'Australia?, Canberra, Sydney, Melbourne, Perth, 1
-64, Qual è il più grande deserto del mondo?, Sahara, Gobi, Antartide, Kalahari, 1
-65, Qual è il nome del satellite naturale della Terra?, Luna, Marte, Giove, Venere, 1
-66, Qual è la lingua più parlata al mondo?, Cinese mandarino, Inglese, Spagnolo, Arabo, 1
-67, Quale grande artista olandese è noto per le sue opere ad olio?, Vincent van Gogh, Piet Mondrian, Rembrandt, Johannes Vermeer, 3
-68, Qual è il più grande fiume del mondo?, Nilo, Amazzoni, Yangtze, Mississippi, 2
-69, Quale nazione ha il codice di area telefonica "+1"?, Stati Uniti d'America, Canada, Messico, Giamaica, 1
-70, Qual è il nome della scimmia più grande del mondo?, Gorilla, Orangutan, Chimpanzé, Gibbone, 1
-71, Qual è il nome dell'isola più grande del mondo?, Groenlandia, Madagascar, Borneo, Sumatra, 1
-72, Quale pittore spagnolo ha dipinto l'opera "La persistenza della memoria"?, Salvador Dalì, Pablo Picasso, Diego Velázquez, Francisco Goya, 1
-73, Qual è il nome della band rock britannica famosa per i loro hit come "Bohemian Rhapsody" e "We Will Rock You"?, Queen, The Beatles, Rolling Stones, Led Zeppelin, 1
-74, Qual è il più alto vulcano attivo del mondo?, Ojos del Salado, Kilimangiaro, Etna, Mauna Kea, 1
-75, Quale grande attore americano ha vinto l'Oscar per la sua interpretazione in "Il Padrino"?, Marlon Brando, Al Pacino, Robert De Niro, James Caan, 1
-76, Quale è il nome della più grande cascata del mondo?, Victoria Falls, Niagara Falls, Iguazu Falls, Angel Falls, 4
-77, Qual è il nome del fondatore di Facebook?, Mark Zuckerberg, Jeff Bezos, Elon Musk, Bill Gates, 1
-78, Qual è il nome del corpo celeste più vicino alla Terra?, Luna, Venere, Marte, Giove, 1
-79, Quale città ospita il Colosseo?, Roma, Atene, Istanbul, Città del Vaticano, 1
-80, Quale è la montagna più alta del mondo?, Everest, K2, Mont Blanc, Aconcagua, 1
-81, Qual è il nome del satellite artificiale russo che fu il primo ad essere lanciato nello spazio?, Sputnik 1, Vostok 1, Luna 1, Explorer 1, 1
-82, Quale è il nome della statua che domina la città di Rio de Janeiro in Brasile?, Cristo Redentore, La Torre Eiffel, La Statua della Libertà, Il Colosso di Rodi, 1
+43,Qual è il fiume più lungo del mondo?,Rio delle Amazzoni,Nilo,Mississippi,Yangtze,1
+44,Chi ha scritto il famoso romanzo "Il signore degli anelli"?,J.R.R. Tolkien,George R.R. Martin,J.K. Rowling,Stephen King,1
+45,Quale pianeta del sistema solare è noto come il "pianeta rosso"?,Marte,Venere,Giove,Mercurio,1
+46,Qual è il deserto più grande del mondo?,Sahara,Gobi,Antartide,Kalahari,1
+47,Quale città italiana è conosciuta come la "Città Eterna"?,Roma,Firenze,Venezia,Napoli,1
+48,In che anno è stata fondata l'azienda informatica Apple?,1976,1984,1990,2001,1
+49,Quale è l'organo più grande del corpo umano?,La pelle,Il fegato,Il cuore,Il cervello,1
+50,Quale è il più grande stato degli Stati Uniti d'America?,Alaska,Texas,California,Montana,1
+51,Quale città italiana è famosa per i canali che la attraversano?,Venezia,Milano,Roma,Firenze,1
+52,In che anno è stata fondata la città di New York?,1624,1776,1865,1901,1
+53,Qual è la lingua più parlata al mondo?,Cinese mandarino,Inglese,Spagnolo,Arabo,1
+54,Quale è l'unico continente a non avere una popolazione autoctona?,Antartide,Europa,Asia,Africa,1
+55,In quale paese si trova la città di Machu Picchu?,Perù,Messico,Brasile,Colombia,1
+56,Qual è il nome della più grande cascata del mondo?,Cascate del Niagara,Cascate del Iguazú,Cascate Vitória,Cascate del Salto Ángel,4
+57,Quale era il soprannome di Gaius Julius Caesar?,Giulio Cesare,Il dittatore,Il tiranno,Il conquistatore,2
+58,In quale città si trova il celebre museo dell'Ermitage?,San Pietroburgo,Mosca,Kiev,Varsavia,1
+59,Quale è la forma geometrica della Torre di Pisa?,Cilindro,Cubo,Cono,Sfera,3
+60,Quale dei seguenti animali è il più veloce al mondo?,Ghepardo,Leopardo,Pantera,Tigre,1
+61,Quale è il paese più piccolo del mondo in termini di area territoriale?,Città del Vaticano,Monaco,San Marino,Liechtenstein,1
+62,In quale paese si trova la famosa città di Petra?,Giordania,Egitto,Arabia Saudita,Israele,1
+63,Qual è la capitale dell'Australia?,Canberra,Sydney,Melbourne,Perth,1
+64,Qual è il più grande deserto del mondo?,Sahara,Gobi,Antartide,Kalahari,1
+65,Qual è il nome del satellite naturale della Terra?,Luna,Marte,Giove,Venere,1
+66,Qual è la lingua più parlata al mondo?,Cinese mandarino,Inglese,Spagnolo,Arabo,1
+67,Quale grande artista olandese è noto per le sue opere ad olio?,Vincent van Gogh,Piet Mondrian,Rembrandt,Johannes Vermeer,3
+68,Qual è il più grande fiume del mondo?,Nilo,Amazzoni,Yangtze,Mississippi,2
+69,Quale nazione ha il codice di area telefonica "+1"?,Stati Uniti d'America,Canada,Messico,Giamaica,1
+70,Qual è il nome della scimmia più grande del mondo?,Gorilla,Orangutan,Chimpanzé,Gibbone,1
+71,Qual è il nome dell'isola più grande del mondo?,Groenlandia,Madagascar,Borneo,Sumatra,1
+72,Quale pittore spagnolo ha dipinto l'opera "La persistenza della memoria"?,Salvador Dalì,Pablo Picasso,Diego Velázquez,Francisco Goya,1
+73,Qual è il nome della band rock britannica famosa per i loro hit come "Bohemian Rhapsody" e "We Will Rock You"?,Queen,The Beatles,Rolling Stones,Led Zeppelin,1
+74,Qual è il più alto vulcano attivo del mondo?,Ojos del Salado,Kilimangiaro,Etna,Mauna Kea,1
+75,Quale grande attore americano ha vinto l'Oscar per la sua interpretazione in "Il Padrino"?,Marlon Brando,Al Pacino,Robert De Niro,James Caan,1
+76,Quale è il nome della più grande cascata del mondo?,Victoria Falls,Niagara Falls,Iguazu Falls,Angel Falls,4
+77,Qual è il nome del fondatore di Facebook?,Mark Zuckerberg,Jeff Bezos,Elon Musk,Bill Gates,1
+78,Qual è il nome del corpo celeste più vicino alla Terra?,Luna,Venere,Marte,Giove,1
+79,Quale città ospita il Colosseo?,Roma,Atene,Istanbul,Città del Vaticano,1
+80,Quale è la montagna più alta del mondo?,Everest,K2,Mont Blanc,Aconcagua,1
+81,Qual è il nome del satellite artificiale russo che fu il primo ad essere lanciato nello spazio?,Sputnik 1,Vostok 1,Luna 1,Explorer 1,1
+82,Quale è il nome della statua che domina la città di Rio de Janeiro in Brasile?,Cristo Redentore,La Torre Eiffel,La Statua della Libertà,Il Colosso di Rodi,1
 83,Qual è il fiume più lungo d'Europa?,Volga,Danubio,Elba,Senna,1
 84,In quale paese si trova la città di Marrakech?,Tunisia,Algeria,Marocco,Egitto,3
 85,Qual è il simbolo chimico dell'oro?,O,Ag,Au,Hg,3
