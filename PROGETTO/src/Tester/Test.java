@@ -1,6 +1,7 @@
 package Tester;
 
 
+import Control.GestoreDomande;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -25,7 +26,11 @@ public class Test {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
+        
+        GestoreDomande g = new GestoreDomande(); //testiamo il gestore
+        
+        g.Gioca(); //inizio del gioco
         
         
         

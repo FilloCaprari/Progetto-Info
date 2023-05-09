@@ -18,14 +18,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import static java.util.Collections.shuffle;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
  * @author senafej
  */
 public class GestoreDomande{
-    
-    
     
     //variabili
     private String line;
@@ -39,36 +38,56 @@ public class GestoreDomande{
     
     public void lettura() throws IOException{ //leggiamo il file
         BufferedReader br; //file
-        br = new BufferedReader(new FileReader("Domande.csv"));
-        br.readLine();
-        while ((this.line = br.readLine()) != null) {
-
+        br = new BufferedReader(new FileReader("Domande.csv")); //apriamo il file
+        br.readLine(); //leggiamo la prima riga, che non ci serve, dove ci sono le etichette
+        while ((this.line = br.readLine()) != null) { //lettura domande
                 String[] info = this.line.split(",");
                 Opzione o1=new Opzione(info[2],false);
                 Opzione o2=new Opzione(info[3],false);
                 Opzione o3=new Opzione(info[4],false);
                 Opzione o4=new Opzione(info[5],false);
                 Domanda d =new Domanda(info[0],info[1],o1,o2,o3,o4,parseInt(info[6]));
-                lista.add(d);
+                lista.add(d); //incrementiamo la lista delle domande
             }
-       br.close();
+       br.close();//chiudiamo il file
     }
     
-    public ArrayList scegliDomande()
+    public void scegliDomande() //scegliamo le 15 domande con lo shuffle di intArray e prendendo i prikmi 15 numeri.
     {
         for(int i=0;i<100;i++)
         {
-            intArray.set(i, i);
+            intArray.set(i, i); //carichiamo intArray con i numeri da 0 a 99
         }
-        this.domandeScelte.clear();
+        this.domandeScelte.clear(); //svuotiamo l'array per errori di refusi di memoria
 		
-        shuffle(intArray);
+        shuffle(intArray); //"mescoliamo" l'array
         
-       for(int i=0; i<15; i++){
+       for(int i=0; i<15; i++){ //carichiamo domandeScelte con i primi 15 numeri di intArray, corrispondenti a 15 domande sparse in lista
           Domanda d = lista.get(intArray.get(i).intValue());
           this.domandeScelte.add(d);
        }
-        return domandeScelte;
+    }
+    
+    public void Gioca() throws IOException{ //inizia il divertimento!
+        Scanner scanner = new Scanner(System.in);
+        
+        lettura(); //leggiamo il file
+        scegliDomande();//scegliamo le domande
+        
+        int i=0;
+        while(i<15){
+            
+            System.out.print(this.domandeScelte.get(i).getTesto());
+            System.out.println(this.domandeScelte.get(i).getA());
+            System.out.println(this.domandeScelte.get(i).getB());
+            System.out.println(this.domandeScelte.get(i).getC());
+            System.out.println(this.domandeScelte.get(i).getD());
+            
+            System.out.print("Scelta(A,B,C,D):");
+            String scelta = scanner.nextLine();
+            
+            i++;
+        }
     }
         
 }

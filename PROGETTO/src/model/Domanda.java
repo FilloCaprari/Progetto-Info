@@ -24,7 +24,7 @@ public class Domanda {
         this.c=c;
         this.d=d;
         this.corretta=corr;
-        
+        Giusta();
     }
 
     public String getId() {
