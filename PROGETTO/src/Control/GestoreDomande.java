@@ -5,6 +5,7 @@
  */
 package Control;
 
+//librerie utilizzate
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -75,18 +76,25 @@ public class GestoreDomande{
         scegliDomande();//scegliamo le domande
         
         int i=0;
-        while(i<15){
+        while(i<15){ //while utilizzato per fare solo 15 domande
             
+            //output della domanda e edelle opzioni di risposta
             System.out.print(this.domandeScelte.get(i).getTesto());
             System.out.println(this.domandeScelte.get(i).getA());
             System.out.println(this.domandeScelte.get(i).getB());
             System.out.println(this.domandeScelte.get(i).getC());
             System.out.println(this.domandeScelte.get(i).getD());
+            String scelta;
             
-            System.out.print("Scelta(A,B,C,D):");
-            String scelta = scanner.nextLine();
+            do{ //do-while per far ripetere la scelta se è stato digitato un valore invalido
+                System.out.print("Scelta(A,B,C,D):");
+                scelta = scanner.nextLine(); //input della risposta dell'utente
+            }while(scelta.charAt(0) != 'A' || scelta.charAt(0) != 'B' || scelta.charAt(0) != 'C' || scelta.charAt(0) != 'D');
             
-            i++;
+            //non so come controllare se la ripsota è giusta,visto che la correttezza è nella classe opzione e qui ne ho 4 e dovrei prendere quella corrrispondente alla scelta dell'utente, ma non so come si fa
+            //if(scelta == this.domandeScelte.get(i).)//controllo se la risposta dell'utente è giusta
+            
+            i++; //aumento contatore utilizzato nel while
         }
     }
         

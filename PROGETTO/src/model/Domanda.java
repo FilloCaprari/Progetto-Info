@@ -11,10 +11,12 @@ package model;
  */
 public class Domanda {
     
+    //variabili utilizzate
     private String id, testo;
     private Opzione a,b,c,d;
     private int corretta;
     
+    //costruttore
     public Domanda(String ID, String t, Opzione a, Opzione b, Opzione c, Opzione d, int corr)
     {
         this.id=ID;
@@ -27,6 +29,7 @@ public class Domanda {
         Giusta();
     }
 
+    //getter di tutti parametri
     public String getId() {
         return id;
     }
@@ -51,6 +54,7 @@ public class Domanda {
         return d;
     }
     
+    //metodo per settare l'opzione giusta
     public void Giusta()
     {
         if(corretta==1)a.setGiusta();

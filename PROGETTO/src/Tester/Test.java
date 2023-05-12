@@ -31,10 +31,6 @@ public class Test {
         GestoreDomande g = new GestoreDomande(); //testiamo il gestore
         
         g.Gioca(); //inizio del gioco
-        
-        
-        
-
     }
     
 }
