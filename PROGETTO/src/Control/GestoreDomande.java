@@ -57,7 +57,7 @@ public class GestoreDomande{
     {
         for(int i=0;i<100;i++)
         {
-            intArray.set(i, i); //carichiamo intArray con i numeri da 0 a 99
+            intArray.add(i); //carichiamo intArray con i numeri da 0 a 99
         }
         this.domandeScelte.clear(); //svuotiamo l'array per errori di refusi di memoria
 		
@@ -79,23 +79,22 @@ public class GestoreDomande{
         while(i<15){ //while utilizzato per fare solo 15 domande
             
             //output della domanda e edelle opzioni di risposta
-            System.out.print(this.domandeScelte.get(i).getTesto());
-            System.out.println(this.domandeScelte.get(i).getA());
-            System.out.println(this.domandeScelte.get(i).getB());
-            System.out.println(this.domandeScelte.get(i).getC());
-            System.out.println(this.domandeScelte.get(i).getD());
+            System.out.println(this.domandeScelte.get(i).getTesto());
+            System.out.println("a: " + this.domandeScelte.get(i).getA().getOpzione1());
+            System.out.println("b: " + this.domandeScelte.get(i).getB().getOpzione1());
+            System.out.println("c: " + this.domandeScelte.get(i).getC().getOpzione1());
+            System.out.println("d: " + this.domandeScelte.get(i).getD().getOpzione1());
             String scelta;
             
             do{ //do-while per far ripetere la scelta se è stato digitato un valore invalido
-                System.out.print("Scelta(A,B,C,D):");
+                System.out.print("Scelta(a,b,c,d):");
                 scelta = scanner.nextLine(); //input della risposta dell'utente
-            }while(scelta.charAt(0) != 'A' || scelta.charAt(0) != 'B' || scelta.charAt(0) != 'C' || scelta.charAt(0) != 'D');
+            }while(scelta.charAt(0) != 'a' && scelta.charAt(0) != 'b' && scelta.charAt(0) != 'c' && scelta.charAt(0) != 'd');
             
             //non so come controllare se la ripsota è giusta,visto che la correttezza è nella classe opzione e qui ne ho 4 e dovrei prendere quella corrrispondente alla scelta dell'utente, ma non so come si fa
-            //if(scelta == this.domandeScelte.get(i).)//controllo se la risposta dell'utente è giusta
+            if(scelta == this.domandeScelte.get(i).rispostaGiusta())//controllo se la risposta dell'utente è giusta
             
             i++; //aumento contatore utilizzato nel while
         }
-    }
-        
+    }   
 }

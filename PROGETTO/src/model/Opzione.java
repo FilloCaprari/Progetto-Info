@@ -27,6 +27,7 @@ public class Opzione{ //classe usata per le opzioni
         this.giusta = true;
     }
 
-    
-    
+    public boolean isGiusta() {
+        return giusta;
+    } 
 }

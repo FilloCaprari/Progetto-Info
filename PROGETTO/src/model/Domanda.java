@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author senafej
@@ -13,7 +15,7 @@ public class Domanda {
     
     //variabili utilizzate
     private String id, testo;
-    private Opzione a,b,c,d;
+    private ArrayList<Opzione> opzioni;
     private int corretta;
     
     //costruttore
@@ -21,10 +23,11 @@ public class Domanda {
     {
         this.id=ID;
         this.testo=t;
-        this.a=a;
-        this.b=b;
-        this.c=c;
-        this.d=d;
+        this.opzioni = new ArrayList<>();
+        opzioni.add(a);
+        opzioni.add(b);
+        opzioni.add(c);
+        opzioni.add(d);
         this.corretta=corr;
         Giusta();
     }
@@ -38,29 +41,25 @@ public class Domanda {
         return testo;
     }
 
-    public Opzione getA() {
-        return a;
-    }
-
-    public Opzione getB() {
-        return b;
-    }
-
-    public Opzione getC() {
-        return c;
-    }
-
-    public Opzione getD() {
-        return d;
+    public ArrayList<Opzione> getOpzioni() {
+        return opzioni;
     }
     
     //metodo per settare l'opzione giusta
     public void Giusta()
     {
-        if(corretta==1)a.setGiusta();
-        if(corretta==2)b.setGiusta();
-        if(corretta==3)c.setGiusta();
-        if(corretta==4)d.setGiusta();
+       if(this.corretta == 1)opzioni.get(0).setGiusta();
+       if(this.corretta == 2)opzioni.get(1).setGiusta();
+       if(this.corretta == 3)opzioni.get(2).setGiusta();
+       if(this.corretta == 4)opzioni.get(3).setGiusta();
+    }
+
+    public char rispostaGiusta() {
+       if(opzioni.get(0).isGiusta())return 'a';
+       if(opzioni.get(1).isGiusta())return 'b';
+       if(opzioni.get(2).isGiusta())return 'c';
+       if(opzioni.get(3).isGiusta())return 'd';
+       return 0;
     }
    
     
