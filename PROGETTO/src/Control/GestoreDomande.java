@@ -20,6 +20,8 @@ import java.util.Collections;
 import static java.util.Collections.shuffle;
 import java.util.List;
 import java.util.Scanner;
+import model.Aiuto;
+import model.Premio;
 
 /**
  *
@@ -74,16 +76,17 @@ public class GestoreDomande{
         
         lettura(); //leggiamo il file
         scegliDomande();//scegliamo le domande
+        Premio p =new Premio();
         
         int i=0;
         while(i<15){ //while utilizzato per fare solo 15 domande
             
             //output della domanda e edelle opzioni di risposta
             System.out.println(this.domandeScelte.get(i).getTesto());
-            System.out.println("a: " + this.domandeScelte.get(i).getA().getOpzione1());
-            System.out.println("b: " + this.domandeScelte.get(i).getB().getOpzione1());
-            System.out.println("c: " + this.domandeScelte.get(i).getC().getOpzione1());
-            System.out.println("d: " + this.domandeScelte.get(i).getD().getOpzione1());
+            System.out.println("a: " + this.domandeScelte.get(i).getOpz1().getOpzione1());
+            System.out.println("b: " + this.domandeScelte.get(i).getOpz2().getOpzione1());
+            System.out.println("c: " + this.domandeScelte.get(i).getOpz3().getOpzione1());
+            System.out.println("d: " + this.domandeScelte.get(i).getOpz4().getOpzione1());
             String scelta;
             
             do{ //do-while per far ripetere la scelta se è stato digitato un valore invalido
@@ -91,9 +94,18 @@ public class GestoreDomande{
                 scelta = scanner.nextLine(); //input della risposta dell'utente
             }while(scelta.charAt(0) != 'a' && scelta.charAt(0) != 'b' && scelta.charAt(0) != 'c' && scelta.charAt(0) != 'd');
             
-            //non so come controllare se la ripsota è giusta,visto che la correttezza è nella classe opzione e qui ne ho 4 e dovrei prendere quella corrrispondente alla scelta dell'utente, ma non so come si fa
-            if(scelta == this.domandeScelte.get(i).rispostaGiusta())//controllo se la risposta dell'utente è giusta
-            
+            if(scelta.charAt(0) == this.domandeScelte.get(i).rispostaGiusta())//controllo se la risposta dell'utente è giusta
+            {
+                System.out.println("RISPOSTA CORRETTA!");
+                p.aggiornaVincita();
+                 System.out.println(p.getVincita()+"$");
+            }
+            else
+            {
+                System.out.println("RISPOSTA SBAGLIATA! HAI PERSO!");
+                System.out.println("LA RISPOSTA ERA LA LETTERA: " + this.domandeScelte.get(i).rispostaGiusta());
+                i=16;
+            }
             i++; //aumento contatore utilizzato nel while
         }
     }   

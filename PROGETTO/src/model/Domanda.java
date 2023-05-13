@@ -41,8 +41,17 @@ public class Domanda {
         return testo;
     }
 
-    public ArrayList<Opzione> getOpzioni() {
-        return opzioni;
+    public Opzione getOpz1() {
+        return opzioni.get(0);
+    }
+    public Opzione getOpz2() {
+        return opzioni.get(1);
+    }
+    public Opzione getOpz3() {
+        return opzioni.get(2);
+    }
+    public Opzione getOpz4() {
+        return opzioni.get(3);
     }
     
     //metodo per settare l'opzione giusta
@@ -55,10 +64,10 @@ public class Domanda {
     }
 
     public char rispostaGiusta() {
-       if(opzioni.get(0).isGiusta())return 'a';
-       if(opzioni.get(1).isGiusta())return 'b';
-       if(opzioni.get(2).isGiusta())return 'c';
-       if(opzioni.get(3).isGiusta())return 'd';
+       if(opzioni.get(0).isGiusta()==true)return 'a';
+       if(opzioni.get(1).isGiusta()==true)return 'b';
+       if(opzioni.get(2).isGiusta()==true)return 'c';
+       if(opzioni.get(3).isGiusta()==true)return 'd';
        return 0;
     }
    

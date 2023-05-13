@@ -9,6 +9,7 @@ import static java.lang.Integer.parseInt;
 import java.util.ArrayList;
 import model.Domanda;
 import model.Opzione;
+import model.Premio;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -29,6 +30,8 @@ public class Test {
     public static void main(String[] args) throws IOException{
         
         GestoreDomande g = new GestoreDomande(); //testiamo il gestore
+        
+        
         
         g.Gioca(); //inizio del gioco
     }
