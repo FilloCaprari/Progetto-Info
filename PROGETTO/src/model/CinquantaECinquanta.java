@@ -9,16 +9,19 @@ package model;
  * @author jacoposenafe
  */
 public class CinquantaECinquanta extends Aiuto{
+    
+    private Domanda d;
 
-    public CinquantaECinquanta(String nome, boolean usato) {
-        super(nome, usato);
+    public CinquantaECinquanta(Domanda d) {
+        super(d);
+        this.d = d;
     }
 
     
 
-    
-    public void cinquanta()
+    public Opzione cinquanta()
     {
+        return null;
         
     }
     

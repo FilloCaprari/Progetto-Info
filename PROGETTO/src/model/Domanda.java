@@ -70,6 +70,8 @@ public class Domanda {
        if(opzioni.get(3).isGiusta()==true)return 'd';
        return 0;
     }
-   
-    
+
+    public ArrayList<Opzione> getOpzioni() {
+        return opzioni;
+    }
 }

@@ -10,22 +10,23 @@ package model;
  */
 public abstract class Aiuto {
     
-    private String nome;
-    private boolean usato;
+    protected boolean usato;
 
-    public Aiuto(String nome, boolean usato) {
-        this.nome=nome;
+    public Aiuto(Domanda d) {
         this.usato=usato;
     }
     
-    public void AiutoDacasa()
+    public Opzione Aiuto()
     {
-      System.out.println("");
+        System.out.println("");
+        return null;
     }
 
     public boolean isUsato() {
         return usato;
     }
-    
-    
+
+    public void setUsato(boolean usato) {
+        this.usato = true;
+    }
 }
