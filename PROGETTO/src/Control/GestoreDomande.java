@@ -57,7 +57,6 @@ public class GestoreDomande{
                 Opzione o2=new Opzione(info[3],false);
                 Opzione o3=new Opzione(info[4],false);
                 Opzione o4=new Opzione(info[5],false);
-                System.out.println(info[6]);
                 Domanda d =new Domanda(info[0],info[1],o1,o2,o3,o4,parseInt(info[6]));
                 lista.add(d); //incrementiamo la lista delle domande
             }
@@ -80,7 +79,7 @@ public class GestoreDomande{
        }
     }
     
-    public void Gioca() throws IOException, AiutoGiaUsatoException{ //inizia il divertimento!
+    public boolean Gioca() throws IOException, AiutoGiaUsatoException{ //inizia il divertimento!
         Scanner scanner = new Scanner(System.in);
         
         lettura(); //leggiamo il file
@@ -119,26 +118,28 @@ public class GestoreDomande{
                     try{  
                         if(scelta.charAt(0)=='1')
                         {
-                                  System.out.println("JERRY: Secondo me la risposta corretta è "+ aiuto1.Jerry(domandeScelte.get(i)).getOpzione1());       
+                            System.out.println("JERRY: Secondo me la risposta corretta è "+ aiuto1.Jerry(domandeScelte.get(i)).getOpzione1());       
+                            System.out.print("Cosa scelgi? ");
                         }
                         else if(scelta.charAt(0)=='2')
                         {
-                                   aiutoPubb=aiuto2.Pubblico(domandeScelte.get(i));
-                                   System.out.println("a:" + aiutoPubb.get(0) +"%");
-                                   System.out.println("b:" + aiutoPubb.get(1) +"%");
-                                   System.out.println("c:" + aiutoPubb.get(2) +"%");
-                                   System.out.println("d:" + aiutoPubb.get(3) +"%");
+                            aiutoPubb=aiuto2.Pubblico(domandeScelte.get(i));
+                            System.out.println("a:" + aiutoPubb.get(0) +"%");
+                            System.out.println("b:" + aiutoPubb.get(1) +"%");
+                            System.out.println("c:" + aiutoPubb.get(2) +"%");
+                            System.out.println("d:" + aiutoPubb.get(3) +"%");
                         }
 
                         else if(scelta.charAt(0)=='3')
                         {
-                                   cinq=aiuto3.cinquanta(domandeScelte.get(i));
-                                   System.out.println(cinq.get(0).getOpzione1());
-                                   System.out.println(cinq.get(1).getOpzione1());           
+                            cinq=aiuto3.cinquanta(domandeScelte.get(i));
+                            System.out.println(cinq.get(0).getOpzione1());
+                            System.out.println(cinq.get(1).getOpzione1());           
                         }
                         else if(scelta.charAt(0)=='4')
                         {  
                            System.out.println("NONNA ROSANNA: Secondo me la risposta è " + aiuto4.AiutoDaCasa(domandeScelte.get(i)).getOpzione1());
+                           System.out.print("Cosa scelgi? ");
                         }
 
                         do{
@@ -147,7 +148,7 @@ public class GestoreDomande{
                     }
                     catch(AiutoGiaUsatoException ex)
                     {
-                        ex.getMessage();
+                        System.out.println(ex.getMessage());
                         do{
                              scelta = scanner.nextLine();
                         }while(scelta.charAt(0) != 'a' && scelta.charAt(0) != 'b' && scelta.charAt(0) != 'c' && scelta.charAt(0) != 'd'&& scelta.charAt(0) != '1'&& scelta.charAt(0) != '2'&& scelta.charAt(0) != '3'&& scelta.charAt(0) != '4');   
@@ -159,14 +160,19 @@ public class GestoreDomande{
                 System.out.println("RISPOSTA CORRETTA!");
                 p.aggiornaVincita();
                 System.out.println(p.getVincita()+"$");
+                System.out.println("");
+                
+                if(p.getVincita() == 1000000) return true;
             }
             else
             {
                 System.out.println("RISPOSTA SBAGLIATA! HAI PERSO!");
                 System.out.println("LA RISPOSTA ERA LA LETTERA: " + this.domandeScelte.get(i).rispostaGiusta());
+         
                 i=16;
             }
             i++; //aumento contatore utilizzato nel while
         }   
+        return false;
     }    
  }

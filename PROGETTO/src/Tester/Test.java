@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import static java.lang.Integer.parseInt;
 import java.util.ArrayList;
+import java.util.Scanner;
 import model.AiutoGiaUsatoException;
 import model.AiutoPubblico;
 import model.CinquantaECinquanta;
@@ -31,9 +32,25 @@ public class Test {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException, AiutoGiaUsatoException{
-        
+        Scanner scanner = new Scanner(System.in);
+        String scelta;
+       do{
        GestoreDomande g = new GestoreDomande(); //testiamo il gestore
-       g.Gioca(); //inizio del gioco
+        
+       System.out.println("");
+       if(g.Gioca()){//inizio del gioco
+           System.out.println("SEI DIVENTATO MILIONARIO!");
+       }
+       else{
+           System.out.println("RITENTA, SARAI PIU' FORTUNATO!");
+       }
+       
+       System.out.print("Ci stai simpatico, vuoi rigiocare(s/n)?");
+       System.out.println("");
+       System.out.println("");
+       scelta = scanner.nextLine();
+       }while(scelta.charAt(0) == 's'); //se l'utente preme s, rigiocherà, se invece preme qualsiasi altro carattere/pulsante, il programma si arresterà
+        
+      
     }
-    
 }
