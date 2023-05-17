@@ -61,7 +61,7 @@ public class GestoreDomande{
                 Domanda d =new Domanda(info[0],info[1],o1,o2,o3,o4,parseInt(info[6]));
                 lista.add(d); //incrementiamo la lista delle domande
             }
-      // br.close();//chiudiamo il file
+       br.close();//chiudiamo il file
     }
     
     public void scegliDomande() //scegliamo le 15 domande con lo shuffle di intArray e prendendo i prikmi 15 numeri.
