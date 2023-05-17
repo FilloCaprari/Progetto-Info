@@ -26,7 +26,7 @@ public abstract class Aiuto {
         return usato;
     }
 
-    public void setUsato(boolean usato) {
+    public void setUsato() {
         this.usato = true;
     }
 }
