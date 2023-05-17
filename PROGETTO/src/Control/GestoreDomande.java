@@ -57,10 +57,11 @@ public class GestoreDomande{
                 Opzione o2=new Opzione(info[3],false);
                 Opzione o3=new Opzione(info[4],false);
                 Opzione o4=new Opzione(info[5],false);
+                System.out.println(info[6]);
                 Domanda d =new Domanda(info[0],info[1],o1,o2,o3,o4,parseInt(info[6]));
                 lista.add(d); //incrementiamo la lista delle domande
             }
-       br.close();//chiudiamo il file
+      // br.close();//chiudiamo il file
     }
     
     public void scegliDomande() //scegliamo le 15 domande con lo shuffle di intArray e prendendo i prikmi 15 numeri.
@@ -94,83 +95,78 @@ public class GestoreDomande{
 
         int i=0;
         while(i<15){ //while utilizzato per fare solo 15 domande
-            
+
             String scelta=" ";
-            
+
             //output della domanda e edelle opzioni di risposta
             System.out.println(this.domandeScelte.get(i).getTesto());
             System.out.println("a: " + this.domandeScelte.get(i).getOpz1().getOpzione1());
             System.out.println("b: " + this.domandeScelte.get(i).getOpz2().getOpzione1());
             System.out.println("c: " + this.domandeScelte.get(i).getOpz3().getOpzione1());
             System.out.println("d: " + this.domandeScelte.get(i).getOpz4().getOpzione1());
-            
-            
+
+
             do{ //do-while per far ripetere la scelta se è stato digitato un valore invalido
                 System.out.print("Scelta(a,b,c,d):");
                 System.out.print("Aiuti(1:Aiuto di Jerry, 2:Aiuto dal pubblico, 3:50/50, 4:Aiuto da Casa):");
                 scelta = scanner.nextLine(); //input della risposta dell'utente
             }while(scelta.charAt(0) != 'a' && scelta.charAt(0) != 'b' && scelta.charAt(0) != 'c' && scelta.charAt(0) != 'd' && scelta.charAt(0) != '1' && scelta.charAt(0) != '2' && scelta.charAt(0) != '3' && scelta.charAt(0) != '4');
-            
-            
-         if(scelta.charAt(0)=='1' || scelta.charAt(0)=='2' ||scelta.charAt(0)=='3' ||scelta.charAt(0)=='4')
-         {
-             
-            do{    
-             
-             try{  
-                if(scelta.charAt(0)=='1')
-                {
-                          System.out.println("JERRY: Secondo me la risposta corretta è "+ aiuto1.Jerry(domandeScelte.get(i)).getOpzione1());       
-                }
-                else if(scelta.charAt(0)=='2')
-                {
-                           aiutoPubb=aiuto2.Pubblico(domandeScelte.get(i));
-                           System.out.println("a:" + aiutoPubb.get(0) +"%");
-                           System.out.println("b:" + aiutoPubb.get(1) +"%");
-                           System.out.println("c:" + aiutoPubb.get(2) +"%");
-                           System.out.println("d:" + aiutoPubb.get(3) +"%");
-                }
 
-                else if(scelta.charAt(0)=='3')
-                {
-                           cinq=aiuto3.cinquanta(domandeScelte.get(i));
-                           System.out.println(cinq.get(0).getOpzione1());
-                           System.out.println(cinq.get(1).getOpzione1());           
-                }
-                else if(scelta.charAt(0)=='4')
-                {  
-                   System.out.println("NONNA ROSANNA: Secondo me la risposta è " + aiuto4.AiutoDaCasa(domandeScelte.get(i)).getOpzione1());
-                }
 
-                do{
-                    scelta = scanner.nextLine();
-                }while(scelta.charAt(0) != 'a' && scelta.charAt(0) != 'b' && scelta.charAt(0) != 'c' && scelta.charAt(0) != 'd' && scelta.charAt(0) != '1'&& scelta.charAt(0) != '2'&& scelta.charAt(0) != '3'&& scelta.charAt(0) != '4');
+            if(scelta.charAt(0)=='1' || scelta.charAt(0)=='2' ||scelta.charAt(0)=='3' ||scelta.charAt(0)=='4'){
+
+                do{    
+                    try{  
+                        if(scelta.charAt(0)=='1')
+                        {
+                                  System.out.println("JERRY: Secondo me la risposta corretta è "+ aiuto1.Jerry(domandeScelte.get(i)).getOpzione1());       
+                        }
+                        else if(scelta.charAt(0)=='2')
+                        {
+                                   aiutoPubb=aiuto2.Pubblico(domandeScelte.get(i));
+                                   System.out.println("a:" + aiutoPubb.get(0) +"%");
+                                   System.out.println("b:" + aiutoPubb.get(1) +"%");
+                                   System.out.println("c:" + aiutoPubb.get(2) +"%");
+                                   System.out.println("d:" + aiutoPubb.get(3) +"%");
+                        }
+
+                        else if(scelta.charAt(0)=='3')
+                        {
+                                   cinq=aiuto3.cinquanta(domandeScelte.get(i));
+                                   System.out.println(cinq.get(0).getOpzione1());
+                                   System.out.println(cinq.get(1).getOpzione1());           
+                        }
+                        else if(scelta.charAt(0)=='4')
+                        {  
+                           System.out.println("NONNA ROSANNA: Secondo me la risposta è " + aiuto4.AiutoDaCasa(domandeScelte.get(i)).getOpzione1());
+                        }
+
+                        do{
+                            scelta = scanner.nextLine();
+                        }while(scelta.charAt(0) != 'a' && scelta.charAt(0) != 'b' && scelta.charAt(0) != 'c' && scelta.charAt(0) != 'd' && scelta.charAt(0) != '1'&& scelta.charAt(0) != '2'&& scelta.charAt(0) != '3'&& scelta.charAt(0) != '4');
+                    }
+                    catch(AiutoGiaUsatoException ex)
+                    {
+                        ex.getMessage();
+                        do{
+                             scelta = scanner.nextLine();
+                        }while(scelta.charAt(0) != 'a' && scelta.charAt(0) != 'b' && scelta.charAt(0) != 'c' && scelta.charAt(0) != 'd'&& scelta.charAt(0) != '1'&& scelta.charAt(0) != '2'&& scelta.charAt(0) != '3'&& scelta.charAt(0) != '4');   
+                    }
+               }while(scelta.charAt(0) == '1' || scelta.charAt(0) == '2' || scelta.charAt(0) == '3' || scelta.charAt(0) == '4');
             }
-            catch(AiutoGiaUsatoException ex)
+
+            if(scelta.charAt(0) == this.domandeScelte.get(i).rispostaGiusta()){//controllo se la risposta dell'utente è giusta
+                System.out.println("RISPOSTA CORRETTA!");
+                p.aggiornaVincita();
+                System.out.println(p.getVincita()+"$");
+            }
+            else
             {
-                ex.getMessage();
-                do{
-                     scelta = scanner.nextLine();
-                }while(scelta.charAt(0) != 'a' && scelta.charAt(0) != 'b' && scelta.charAt(0) != 'c' && scelta.charAt(0) != 'd'&& scelta.charAt(0) != '1'&& scelta.charAt(0) != '2'&& scelta.charAt(0) != '3'&& scelta.charAt(0) != '4');   
+                System.out.println("RISPOSTA SBAGLIATA! HAI PERSO!");
+                System.out.println("LA RISPOSTA ERA LA LETTERA: " + this.domandeScelte.get(i).rispostaGiusta());
+                i=16;
             }
-       }while(scelta.charAt(0) == '1' || scelta.charAt(0) == '2' || scelta.charAt(0) == '3' || scelta.charAt(0) == '4');
-          
-     }
-         
-         if(scelta.charAt(0) == this.domandeScelte.get(i).rispostaGiusta())//controllo se la risposta dell'utente è giusta
-                    {
-                        System.out.println("RISPOSTA CORRETTA!");
-                        p.aggiornaVincita();
-                        System.out.println(p.getVincita()+"$");
-                    }
-                    else
-                    {
-                        System.out.println("RISPOSTA SBAGLIATA! HAI PERSO!");
-                        System.out.println("LA RISPOSTA ERA LA LETTERA: " + this.domandeScelte.get(i).rispostaGiusta());
-                        i=16;
-                    }
-                    i++; //aumento contatore utilizzato nel while
-    }
-  }
-        
+            i++; //aumento contatore utilizzato nel while
+        }   
+    }    
  }
