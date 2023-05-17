@@ -13,18 +13,18 @@ public class AiutoDaCasa extends Aiuto{
     
     private Domanda d;
     private int scelta;
+    private boolean usato=false;
 
     
-    public AiutoDaCasa(Domanda d) {
-        super(d);
-        this.d = d;
+    public AiutoDaCasa() {
+        super();
         setScelta(this.scelta);
     }
     
-    public Opzione AiutoDaCasa() throws AiutoGiaUsatoException{
+    public Opzione AiutoDaCasa(Domanda d) throws AiutoGiaUsatoException{
         if(!this.usato){//controlliamo se l'aiuto è gia stato usato oppure no
             setUsato(); //settiamo la variabile usato a true, in modo da non far utilizzare due volte lo stesso aiuto
-            return (this.d.getOpzioni().get(this.scelta));
+            return (d.getOpzioni().get(this.scelta));
         }
         else throw new AiutoGiaUsatoException();
         

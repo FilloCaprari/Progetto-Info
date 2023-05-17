@@ -13,18 +13,25 @@ import java.util.ArrayList;
 public class AiutoPubblico extends Aiuto {
     
     private Domanda d;
+    private boolean usato=false;
+
     private ArrayList<Double> percentuali;
     
-    public AiutoPubblico(Domanda d) {
-        super(d);
+    public AiutoPubblico() {
+        super();
         this.percentuali = new ArrayList();
-        this.d = d;
         setPercentuali();
     }
     
-    public ArrayList<Double> Pubblico(){
-        setUsato();
-        return this.percentuali;
+    public ArrayList<Double> Pubblico(Domanda d) throws AiutoGiaUsatoException{
+        if(!this.usato)
+        {
+            setUsato();
+            return this.percentuali;
+        }
+        else throw new AiutoGiaUsatoException();
+            
+        
     }
     
     @Override

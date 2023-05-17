@@ -13,24 +13,28 @@ import java.util.ArrayList;
 public class CinquantaECinquanta extends Aiuto{
     
     private Domanda d;
+    private boolean usato=false;
     private ArrayList<Opzione> lista;
 
-    public CinquantaECinquanta(Domanda d) {
-        super(d);
-        this.d = d;
+    public CinquantaECinquanta() {
+        super();
         this.lista = new ArrayList();
-        setLista();
     }
 
     
 
-    public ArrayList<Opzione> cinquanta()
+    public ArrayList<Opzione> cinquanta(Domanda d) throws AiutoGiaUsatoException
     {
-        setUsato();
-        return this.lista;
+        if(!this.usato)
+        {
+            setLista(d);
+            setUsato();
+            return this.lista;
+        }
+        else throw new AiutoGiaUsatoException();
     }
     
-    public void setLista()//Riempio l'array con le opzioni sbagliate
+    public void setLista(Domanda d)//Riempio l'array con le opzioni sbagliate
     {
         int n=0;
         int x=4;

@@ -12,7 +12,7 @@ public abstract class Aiuto {
     
     protected boolean usato;
 
-    public Aiuto(Domanda d) {
+    public Aiuto() {
         this.usato=usato;
     }
     
