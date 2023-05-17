@@ -8,6 +8,7 @@ import java.io.IOException;
 import static java.lang.Integer.parseInt;
 import java.util.ArrayList;
 import model.AiutoPubblico;
+import model.CinquantaECinquanta;
 import model.Domanda;
 import model.Opzione;
 import model.Premio;
@@ -34,17 +35,18 @@ public class Test {
         
         
         //test per classe AiutoPubblico
-        ArrayList<Double> lista = new ArrayList();
-        Opzione a = new Opzione("jkssjk", true);
-        Opzione b = new Opzione("aaaaa", true);
-        Opzione c = new Opzione("jksssssjk", true);
-        Opzione z = new Opzione("dffdfdfd", true);
-        Domanda d = new Domanda("1", "ciao", a, b, c, z, 3);
-        AiutoPubblico aiuto = new AiutoPubblico(d);
-        lista = aiuto.Pubblico();
-        for(int i = 0; i<4; i++){
-            System.out.println(lista.get(i));
+        Opzione a = new Opzione("SBAGLIATA1", false);
+        Opzione b = new Opzione("SBAGLIATA2", false);
+        Opzione c = new Opzione("SBAGLIATA3", false);
+        Opzione z = new Opzione("GIUSTA", true);
+        Domanda d = new Domanda("1", "ciao", a, b, c, z, 4);
+        CinquantaECinquanta aiuto = new CinquantaECinquanta(d);
+        for(int i=0;i<2;i++)
+        {
+            System.out.println(aiuto.cinquanta().get(i).getOpzione1());
+
         }
+       
         
         
         
